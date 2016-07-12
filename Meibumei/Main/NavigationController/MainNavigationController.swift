@@ -13,7 +13,12 @@ class MainNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        
+    }
+    
+    @objc private func back() {
+        popViewControllerAnimated(true)
     }
     
     // 设置导航栏颜色这里调用才起效

@@ -24,6 +24,14 @@ class HomeTableViewController: UITableViewController {
         loadData()
     }
     
+    private func setupNavBar() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "homeCamera"), style: .Plain, target: self, action: Selector.carmeraAction)
+    }
+    
+    func carmeraAction() {
+        
+    }
+    
     private func setupTableView() {
         tableView.registerNib(UINib(nibName: HomeCellID, bundle: nil), forCellReuseIdentifier: HomeCellID)
         tableView.rowHeight = 200
@@ -54,8 +62,12 @@ class HomeTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let vc = HomeDetailedController()
+        vc.superViewModel = homeData[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
+
+
 
 

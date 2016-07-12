@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3B00308549C115BCEBE4137774693C5D06F93471",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3B00308549C115BCEBE4137774693C5D06F93471" : 0,
+    "713DC6FEA760055605AB75862DDE3BF8E09C085B" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7E75A477-1265-4AAD-9349-946AC3AE5726",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3B00308549C115BCEBE4137774693C5D06F93471" : "Meibumei\/",
+    "713DC6FEA760055605AB75862DDE3BF8E09C085B" : "..\/..\/GFXCF"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Meibumei",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Meibumei.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/KieSun\/Meibumei.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3B00308549C115BCEBE4137774693C5D06F93471"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/KieSun\/GFXCF.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "713DC6FEA760055605AB75862DDE3BF8E09C085B"
+    }
+  ]
+}
