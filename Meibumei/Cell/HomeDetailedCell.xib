@@ -34,32 +34,36 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vai-WT-ntE" userLabel="titleLabel">
-                        <rect key="frame" x="15" y="280" width="42" height="21"/>
+                        <rect key="frame" x="15" y="280" width="418" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCO-Tc-o9z" userLabel="userName">
-                        <rect key="frame" x="55" y="22" width="36" height="17"/>
+                        <rect key="frame" x="55" y="22" width="378" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2S9-ZU-6Xv" userLabel="desLabel">
-                        <rect key="frame" x="15" y="321" width="38" height="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2S9-ZU-6Xv" userLabel="desLabel">
+                        <rect key="frame" x="15" y="321" width="418" height="72"/>
+                        <string key="text">dsghjkdsagkjsadhgasdhjkgfhsadjfhadskfhukdsahfkjasdhgjkasdhfjkasdhfiuhdsikufhaweikughwaeiuaghlskdvbjksdahgilwehfgkjeshgkjesahgiowhgiuwehgkjsdhgikwjflikhds ighweildfjswadjlfhewilutliwehgkjeshgjkuse</string>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="Vai-WT-ntE" firstAttribute="trailing" secondItem="WCO-Tc-o9z" secondAttribute="trailing" id="DML-kJ-YGj"/>
                     <constraint firstItem="SpG-aD-JFy" firstAttribute="bottom" secondItem="aVH-wU-4Xk" secondAttribute="bottom" id="EN2-VH-CZF"/>
                     <constraint firstItem="Vai-WT-ntE" firstAttribute="top" secondItem="aVH-wU-4Xk" secondAttribute="bottom" constant="15" id="HR6-e7-qUH"/>
                     <constraint firstAttribute="trailing" secondItem="aVH-wU-4Xk" secondAttribute="trailing" id="IHf-tw-yRd"/>
                     <constraint firstItem="aVH-wU-4Xk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="J30-tk-Gpm"/>
+                    <constraint firstItem="2S9-ZU-6Xv" firstAttribute="trailing" secondItem="Vai-WT-ntE" secondAttribute="trailing" id="KgX-Z4-syd"/>
                     <constraint firstItem="WCO-Tc-o9z" firstAttribute="leading" secondItem="voL-ov-nKs" secondAttribute="trailing" constant="10" id="Rb2-2w-78i"/>
                     <constraint firstItem="Vai-WT-ntE" firstAttribute="leading" secondItem="voL-ov-nKs" secondAttribute="leading" id="Vcb-bT-SUy"/>
                     <constraint firstAttribute="trailing" secondItem="SpG-aD-JFy" secondAttribute="trailing" id="Vl4-qY-ucg"/>
+                    <constraint firstAttribute="trailing" secondItem="WCO-Tc-o9z" secondAttribute="trailing" constant="8" id="WhY-WJ-Blo"/>
                     <constraint firstItem="voL-ov-nKs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Xhu-1i-ZJE"/>
                     <constraint firstItem="WCO-Tc-o9z" firstAttribute="centerY" secondItem="voL-ov-nKs" secondAttribute="centerY" id="g7g-A1-LIl"/>
                     <constraint firstItem="2S9-ZU-6Xv" firstAttribute="leading" secondItem="Vai-WT-ntE" secondAttribute="leading" id="pve-LW-9sM"/>

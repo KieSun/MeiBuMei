@@ -12,6 +12,10 @@ class HomeDetailedController: UITableViewController {
 
     var headView: HomeDetailedHeadView?
     var superViewModel: MbmGroupList?
+    var cellData: [Result] = {
+        let cellData = [Result]()
+        return cellData
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,9 +40,25 @@ class HomeDetailedController: UITableViewController {
     private func loadData() {
         NetworkTool.getRequest(HomeDetailedApi + "\(superViewModel!.id)/1/2.6.json", success: {[weak self] (json) in
             
-            print(json)
+            if let result = json["result"].arrayObject {
+                
+                for (index, _) in result.enumerate () {
+                    self?.cellData.append(Result(fromDictionary: result[index] as! NSDictionary))
+                }
+            }
+            
         }) { (error) in
         }
     }
     
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cellData.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(HomeDetailedCellID) as? HomeDetailedCell
+        
+        cell?.model = cellData[indexPath.row]
+        return cell!
+    }
 }
