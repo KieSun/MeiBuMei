@@ -29,6 +29,7 @@ class MainNavigationController: UINavigationController {
     override func pushViewController(viewController: UIViewController, animated: Bool) {
         if viewControllers.count > 0 {
             viewController.hidesBottomBarWhenPushed = true
+            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: .Done, target: self, action: #selector(back))
         }
         super.pushViewController(viewController, animated: animated)
     }
@@ -36,5 +37,8 @@ class MainNavigationController: UINavigationController {
     private static func setupThemes() {
         let navBar = UINavigationBar.appearance()
         navBar.barTintColor = UIColor.RGBA(251, g: 197, b: 37, a: 1)
+        navBar.titleTextAttributes = [NSFontAttributeName: UIFont.systemFontOfSize(15)]
+        navBar.tintColor = UIColor.blackColor()
+
     }
 }

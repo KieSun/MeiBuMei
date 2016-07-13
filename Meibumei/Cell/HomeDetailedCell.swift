@@ -21,18 +21,23 @@ class HomeDetailedCell: UITableViewCell {
     var model: Result? {
         didSet {
             iconImageView.kf_setImageWithURL(NSURL(string: model!.userHead ?? "")!)
-            backImageView.kf_setImageWithURL(NSURL(string: model?.product.imageUrls ?? "")!)
             
-            userNameLabel.text = model?.product.nickName
-            titleLabel.text = model?.product.title
-            desLabel.text = model?.editorDesc
-            priceLabel.text = model?.product.price
+            let urlArray = model?.product.imageUrls.componentsSeparatedByString(",")
+            backImageView.kf_setImageWithURL(NSURL(string: urlArray?.first ?? "")!)
+            
+            userNameLabel.text = model!.product.nickName
+            titleLabel.text = model!.product.title
+            desLabel.text = "推荐理由：\(model!.editorDesc)"
+            priceLabel.text = "$ \(model!.product.price)"
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        iconImageView.layer.masksToBounds = true
+        iconImageView.layer.cornerRadius = 15
+        self.selectionStyle = .None
     }
 
 }

@@ -14,6 +14,7 @@ class HomeDetailedHeadView: UIView {
     @IBOutlet weak var headImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var desLabel: UILabel!
+    @IBOutlet weak var contentView: UIView!
     
     var model: MbmGroupList? {
         didSet {
