@@ -14,6 +14,9 @@ class HomeProductDetailsController: UIViewController {
     var productModel: Result?
     var topView: UserView?
     var bottomView: ShareAndBuyView?
+    var tableView: UITableView?
+    
+    var oldOffset: CGFloat?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,15 +57,15 @@ class HomeProductDetailsController: UIViewController {
     }
     
     private func setupTableView() {
-        let tableView = UITableView()
-        view.insertSubview(tableView, atIndex: 0)
-        tableView.backgroundColor = UIColor.yellowColor()
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.rowHeight = 200
-        tableView.registerNib(UINib(nibName: ProductDetailedCellID, bundle: nil), forCellReuseIdentifier: ProductDetailedCellID)
+        tableView = UITableView()
+        view.insertSubview(tableView!, atIndex: 0)
+        tableView!.backgroundColor = UIColor.yellowColor()
+        tableView!.delegate = self
+        tableView!.dataSource = self
+        tableView!.rowHeight = 200
+        tableView!.registerNib(UINib(nibName: ProductDetailedCellID, bundle: nil), forCellReuseIdentifier: ProductDetailedCellID)
         
-        tableView.snp_makeConstraints { (make) in
+        tableView!.snp_makeConstraints { (make) in
             make.left.right.bottom.equalTo(view)
             make.top.equalTo(topView!.snp_bottom)
         }
@@ -72,6 +75,39 @@ class HomeProductDetailsController: UIViewController {
 extension HomeProductDetailsController: UITableViewDelegate {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return productModel!.product.imageCount
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if scrollView.contentOffset.y + 10 > oldOffset {
+            navigationController?.setNavigationBarHidden(true, animated: true)
+            
+            topView?.snp_updateConstraints(closure: { (make) in
+                make.top.equalTo(-64)
+            })
+            
+            view.setNeedsUpdateConstraints()
+            //动画
+            UIView.animateWithDuration(0.5) { [weak self] in
+                self?.view.layoutIfNeeded()
+            }
+            
+        }else if scrollView.contentOffset.y + 10 < oldOffset {
+            navigationController?.setNavigationBarHidden(false, animated: true)
+            topView?.snp_updateConstraints(closure: { (make) in
+                make.top.equalTo(64)
+            })
+            
+            view.setNeedsUpdateConstraints()
+            //动画
+            UIView.animateWithDuration(0.5) { [weak self] in
+                self?.view.layoutIfNeeded()
+            }
+        }
+        
+    }
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        oldOffset = scrollView.contentOffset.y
     }
 }
 
