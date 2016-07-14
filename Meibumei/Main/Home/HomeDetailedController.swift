@@ -95,7 +95,9 @@ class HomeDetailedController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        let vc = HomeProductDetailsController()
+        vc.productModel = cellData[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }

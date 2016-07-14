@@ -41,11 +41,18 @@ struct Product {
     var title: String!
     var price: String!
     var imageUrls: String!
+    var imageCount: Int!
+    var location: String!
+    var description: String!
     
     init(fromDictionary dictionary: NSDictionary){
         nickName = dictionary["nickName"] as? String
         title = dictionary["title"] as? String
         price = dictionary["price"] as? String
         imageUrls = dictionary["imageUrls"] as? String
+        imageCount = dictionary["imageCount"] as? Int
+        location = dictionary["location"] as? String
+        description = dictionary["description"] as? String
+        
     }
 }
