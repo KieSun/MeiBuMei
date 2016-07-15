@@ -8,12 +8,12 @@
 
 import UIKit
 import SnapKit
-
 class HomeProductDetailsController: UIViewController {
 
     var productModel: Result?
     var topView: UserView?
     var bottomView: ShareAndBuyView?
+    var bottomSmallView: ShareAndBuyView?
     var tableView: UITableView?
     
     var oldOffset: CGFloat?
@@ -36,10 +36,19 @@ class HomeProductDetailsController: UIViewController {
         
         bottomView!.snp_makeConstraints { (make) in
             make.left.bottom.right.equalTo(view)
-            make.height.equalTo(200)
+            make.height.equalTo(150)
         }
         
         bottomView!.model = productModel
+        
+        bottomSmallView = NSBundle.mainBundle().loadNibNamed("ShareAndBuyView", owner: nil, options: nil).last as? ShareAndBuyView
+        bottomSmallView?.alpha = 0.5
+        view.insertSubview(bottomSmallView!, belowSubview: bottomView!)
+        
+        bottomSmallView!.snp_makeConstraints { (make) in
+            make.left.bottom.right.equalTo(view)
+            make.height.equalTo(50)
+        }
     }
     
     private func setupTopView() {
@@ -62,7 +71,9 @@ class HomeProductDetailsController: UIViewController {
         tableView!.backgroundColor = UIColor.yellowColor()
         tableView!.delegate = self
         tableView!.dataSource = self
-        tableView!.rowHeight = 200
+        tableView?.showsVerticalScrollIndicator = false
+        
+        tableView?.bounces = false
         tableView!.registerNib(UINib(nibName: ProductDetailedCellID, bundle: nil), forCellReuseIdentifier: ProductDetailedCellID)
         
         tableView!.snp_makeConstraints { (make) in
@@ -85,8 +96,12 @@ extension HomeProductDetailsController: UITableViewDelegate {
                 make.top.equalTo(-64)
             })
             
+            bottomView?.snp_updateConstraints(closure: { (make) in
+                make.bottom.equalTo(150)
+            })
+            
             view.setNeedsUpdateConstraints()
-            //动画
+            
             UIView.animateWithDuration(0.5) { [weak self] in
                 self?.view.layoutIfNeeded()
             }
@@ -97,8 +112,12 @@ extension HomeProductDetailsController: UITableViewDelegate {
                 make.top.equalTo(64)
             })
             
+            bottomView?.snp_updateConstraints(closure: { (make) in
+                make.bottom.equalTo(view)
+            })
+            
             view.setNeedsUpdateConstraints()
-            //动画
+            
             UIView.animateWithDuration(0.5) { [weak self] in
                 self?.view.layoutIfNeeded()
             }
@@ -106,8 +125,32 @@ extension HomeProductDetailsController: UITableViewDelegate {
         
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let vc = PhotoBrowserController()
+        
+        let urlArray = productModel?.product.imageUrls.componentsSeparatedByString(",")
+        vc.imageCount = productModel?.product.imageCount
+        vc.imageArray = urlArray!
+        presentViewController(vc, animated: true, completion: nil)
+    }
+    
     func scrollViewWillBeginDragging(scrollView: UIScrollView) {
         oldOffset = scrollView.contentOffset.y
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let urlArray = productModel?.product.imageUrls.componentsSeparatedByString(",")
+        let string = urlArray![indexPath.row]
+        let height = string[82...84] as NSString
+        let width = string[87...89] as NSString
+        
+        if width.containsString("w") {
+            return 200
+        }else {
+            let scale = CGFloat(width.intValue) / ScreenWidth
+            return CGFloat(height.intValue) * scale
+        }
+        
     }
 }
 

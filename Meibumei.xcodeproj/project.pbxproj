@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		38CEAEC1B2C0F3ADA615532A /* Pods_Meibumei.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F512E281442F9000769F6E /* Pods_Meibumei.framework */; };
 		9B1C79731D338EBF008357A0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1C79721D338EBF008357A0 /* Model.swift */; };
+		9B3230771D38B381008DA7BF /* PhotoBrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3230761D38B381008DA7BF /* PhotoBrowserController.swift */; };
+		9B3230791D38B39F008DA7BF /* PhotoBrowserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3230781D38B39F008DA7BF /* PhotoBrowserCell.swift */; };
 		9B68C9581D3728BF00D5B3F5 /* ShareAndBuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B68C9571D3728BF00D5B3F5 /* ShareAndBuyView.swift */; };
 		9B68C95A1D3728CD00D5B3F5 /* ShareAndBuyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B68C9591D3728CD00D5B3F5 /* ShareAndBuyView.xib */; };
 		9B68C95C1D372D6300D5B3F5 /* HomeProductDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B68C95B1D372D6300D5B3F5 /* HomeProductDetailsController.swift */; };
@@ -42,6 +44,8 @@
 		20DAA5F5E53E3659D098C21C /* Pods-Meibumei.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meibumei.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meibumei/Pods-Meibumei.release.xcconfig"; sourceTree = "<group>"; };
 		86F512E281442F9000769F6E /* Pods_Meibumei.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meibumei.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B1C79721D338EBF008357A0 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		9B3230761D38B381008DA7BF /* PhotoBrowserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserController.swift; sourceTree = "<group>"; };
+		9B3230781D38B39F008DA7BF /* PhotoBrowserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserCell.swift; sourceTree = "<group>"; };
 		9B68C9571D3728BF00D5B3F5 /* ShareAndBuyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareAndBuyView.swift; sourceTree = "<group>"; };
 		9B68C9591D3728CD00D5B3F5 /* ShareAndBuyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareAndBuyView.xib; sourceTree = "<group>"; };
 		9B68C95B1D372D6300D5B3F5 /* HomeProductDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeProductDetailsController.swift; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 				9BC6749F1D337BCC00F59C7F /* HomeTableViewController.swift */,
 				9BF83A821D34DEB600CDA63E /* HomeDetailedController.swift */,
 				9B68C95B1D372D6300D5B3F5 /* HomeProductDetailsController.swift */,
+				9B3230761D38B381008DA7BF /* PhotoBrowserController.swift */,
 				9BF83A841D34DEE100CDA63E /* View */,
 			);
 			path = Home;
@@ -232,6 +237,7 @@
 				9BF83A8A1D34E45500CDA63E /* HomeDetailedCell.xib */,
 				9B68C9611D37599600D5B3F5 /* ProductDetailedCell.swift */,
 				9B68C9621D37599600D5B3F5 /* ProductDetailedCell.xib */,
+				9B3230781D38B39F008DA7BF /* PhotoBrowserCell.swift */,
 			);
 			name = Cell;
 			path = ../Cell;
@@ -377,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B3230791D38B39F008DA7BF /* PhotoBrowserCell.swift in Sources */,
 				9B68C95C1D372D6300D5B3F5 /* HomeProductDetailsController.swift in Sources */,
 				9BC674A51D33858900F59C7F /* HotViewController.swift in Sources */,
 				9B68C9581D3728BF00D5B3F5 /* ShareAndBuyView.swift in Sources */,
@@ -394,6 +401,7 @@
 				9BC6749C1D337B3400F59C7F /* MainNavigationController.swift in Sources */,
 				9B1C79731D338EBF008357A0 /* Model.swift in Sources */,
 				9BC674A71D33858F00F59C7F /* MyViewController.swift in Sources */,
+				9B3230771D38B381008DA7BF /* PhotoBrowserController.swift in Sources */,
 				9BC674921D33792E00F59C7F /* AppDelegate.swift in Sources */,
 				9BF83A8B1D34E45500CDA63E /* HomeDetailedCell.swift in Sources */,
 			);

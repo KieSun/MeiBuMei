@@ -29,7 +29,7 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PpG-fa-wIm">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PpG-fa-wIm">
                     <rect key="frame" x="124" y="69" width="21" height="22"/>
                     <state key="normal" image="message"/>
                 </button>
@@ -45,11 +45,11 @@
                     <rect key="frame" x="10" y="112" width="26" height="26"/>
                     <state key="normal" image="wd_share_TimeLine"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pki-0V-QrX">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pki-0V-QrX">
                     <rect key="frame" x="122" y="112" width="26" height="26"/>
                     <state key="normal" image="wd_share_QQZone"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tS5-Qj-FdR">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tS5-Qj-FdR">
                     <rect key="frame" x="183" y="112" width="26" height="26"/>
                     <state key="normal" image="wd_share_more"/>
                 </button>
@@ -57,7 +57,7 @@
                     <rect key="frame" x="10" y="69" width="22" height="22"/>
                     <state key="normal" image="talk"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irS-DO-4qV">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irS-DO-4qV">
                     <rect key="frame" x="388" y="69" width="25" height="22"/>
                     <state key="normal" image="moreAction"/>
                 </button>
@@ -126,10 +126,47 @@
             </connections>
             <point key="canvasLocation" x="305.5" y="242.5"/>
         </view>
+        <view contentMode="scaleToFill" id="HTO-pF-y7J" customClass="ShareAndBuyView" customModule="Meibumei" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="423" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffg-ZQ-bLv">
+                    <rect key="frame" x="10" y="22" width="22" height="22"/>
+                    <state key="normal" image="talk"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2M-lM-PEO">
+                    <rect key="frame" x="67" y="22" width="22" height="22"/>
+                    <state key="normal" image="zan"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bju-g1-JHb">
+                    <rect key="frame" x="124" y="22" width="21" height="22"/>
+                    <state key="normal" image="message"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1e-hP-Njg">
+                    <rect key="frame" x="393" y="22" width="20" height="22"/>
+                    <state key="normal" image="sharePicture_black"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ffg-ZQ-bLv" firstAttribute="leading" secondItem="HTO-pF-y7J" secondAttribute="leading" constant="10" id="0Sb-XH-5Qy"/>
+                <constraint firstItem="y2M-lM-PEO" firstAttribute="leading" secondItem="ffg-ZQ-bLv" secondAttribute="trailing" constant="35" id="3tE-JI-UOe"/>
+                <constraint firstItem="bju-g1-JHb" firstAttribute="leading" secondItem="y2M-lM-PEO" secondAttribute="trailing" constant="35" id="FBg-MI-Ns6"/>
+                <constraint firstAttribute="trailing" secondItem="Z1e-hP-Njg" secondAttribute="trailing" constant="10" id="GRT-7g-Vwt"/>
+                <constraint firstItem="y2M-lM-PEO" firstAttribute="centerY" secondItem="ffg-ZQ-bLv" secondAttribute="centerY" id="MZ9-xd-M3M"/>
+                <constraint firstItem="Z1e-hP-Njg" firstAttribute="centerY" secondItem="bju-g1-JHb" secondAttribute="centerY" id="VxV-qa-28Z"/>
+                <constraint firstItem="bju-g1-JHb" firstAttribute="centerY" secondItem="y2M-lM-PEO" secondAttribute="centerY" id="w2l-4g-VTb"/>
+                <constraint firstItem="ffg-ZQ-bLv" firstAttribute="centerY" secondItem="HTO-pF-y7J" secondAttribute="centerY" id="xZX-HS-6bn"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="305.5" y="419.5"/>
+        </view>
     </objects>
     <resources>
         <image name="message" width="21" height="21"/>
         <image name="moreAction" width="25" height="4"/>
+        <image name="sharePicture_black" width="20" height="18"/>
         <image name="talk" width="22" height="22"/>
         <image name="wd_share_QQZone" width="26" height="26"/>
         <image name="wd_share_TimeLine" width="26" height="26"/>

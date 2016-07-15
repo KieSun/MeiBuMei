@@ -49,14 +49,14 @@ class HomeDetailedController: UITableViewController {
         // 返回结果的rect
         var size = CGRect()
         // label的大小
-        let labelSize = CGSizeMake(UIScreen.mainScreen().bounds.size.width - 20, CGFloat.max)
+        let labelSize = CGSizeMake(ScreenWidth - 20, CGFloat.max)
         //得到结果
         size = content.boundingRectWithSize(labelSize, options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes:attributes , context: nil);
 
         
         let height = 210 + 60 + size.height + 20
         
-        headView?.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, height)
+        headView?.frame = CGRectMake(0, 0, ScreenWidth, height)
         tableView.tableHeaderView = headView!
     }
     

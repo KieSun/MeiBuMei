@@ -25,10 +25,10 @@ class HomeTableViewController: UITableViewController {
     }
     
     private func setupNavBar() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "homeCamera"), style: .Plain, target: self, action: Selector.carmeraAction)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "homeCamera"), style: .Plain, target: self, action: .carmeraAction)
     }
     
-    func carmeraAction() {
+    private func carmeraAction(sender: UIButton) {
         
     }
     
@@ -68,6 +68,9 @@ class HomeTableViewController: UITableViewController {
     }
 }
 
+private extension Selector {
+    static let carmeraAction = #selector(HomeTableViewController.carmeraAction(_:))
+}
 
 
 
